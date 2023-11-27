@@ -44,8 +44,12 @@ The users should be able to:
 
 ### User stories and features
 
-[//]: # '1. As a user I want to generate a new piece of advice so I might be able to learn something from it'
-[//]: # '**Feature**: A button that generates a new piece of advice based on an API call'
+1.  As a user, I want to be able to sign myself up for the newsletter. This is so I can stay up to date with the newest updates in my industry and keep learning.
+
+        Feature 1: Form in which user can fill in and submit their e-mail address.
+
+        Feature 2: Show success message on form submit.
+
 [//]: # 'Optional: ### Flowchart'
 [//]: # 'Optional: insert flowchart link below'
 
