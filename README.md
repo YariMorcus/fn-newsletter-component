@@ -18,6 +18,7 @@ _Source: [Challenge page Frontend Mentor](https://www.frontendmentor.io/challeng
     - [Links](#links)
   - [Project information](#project-information)
     - [User stories and features](#user-stories-and-features)
+    - [Flowchart](#flowchart)
   - [Author](#author)
 
 ## Overview
@@ -50,8 +51,9 @@ The users should be able to:
 
         Feature 2: Show success message on form submit.
 
-[//]: # 'Optional: ### Flowchart'
-[//]: # 'Optional: insert flowchart link below'
+### Flowchart
+
+<img src="newsletter-component.svg" alt="Flowchart">
 
 ## Author
 
