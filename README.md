@@ -53,7 +53,7 @@ The users should be able to:
 
 ### Flowchart
 
-<img src="newsletter-component.svg" alt="Flowchart">
+![Flowchart](newsletter-component.svg);
 
 ## Author
 
