@@ -18,8 +18,8 @@
 
   &__email {
     margin-bottom: 2rem;
-    border: 1px solid v.$grey;
     padding: 2rem;
+    border: 1px solid v.$grey;
     border-radius: 5px;
 
     &::placeholder {
@@ -28,11 +28,11 @@
   }
 
   &__submit {
-    border: none;
-    background-color: v.$dark-slate-grey;
+    padding: 2rem;
     color: v.$white;
     font-weight: 700;
-    padding: 2rem;
+    background-color: v.$dark-slate-grey;
+    border: none;
     border-radius: 5px;
   }
 }
