@@ -20,7 +20,15 @@
     font: 700 4rem 'Roboto', sans-serif;
   }
 
+  &__p {
+    margin-bottom: 2.5rem;
+  }
+
   &__ul {
     margin-bottom: 4rem;
+  }
+
+  &__li {
+    margin-bottom: 1rem;
   }
 }
