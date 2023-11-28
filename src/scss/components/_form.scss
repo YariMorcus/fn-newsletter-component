@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+@use '../base/typography' as t;
+
+.form {
+  &__label,
+  &__email,
+  &__submit {
+    display: block;
+    width: 100%;
+  }
+
+  &__label {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  &__email {
+    margin-bottom: 2rem;
+    border: 1px solid v.$grey;
+    padding: 2rem;
+    border-radius: 5px;
+
+    &::placeholder {
+      color: v.$grey;
+    }
+  }
+
+  &__submit {
+    border: none;
+    background-color: v.$dark-slate-grey;
+    color: v.$white;
+    font-weight: 700;
+    padding: 2rem;
+    border-radius: 5px;
+  }
+}
