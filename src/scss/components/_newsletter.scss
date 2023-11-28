@@ -26,9 +26,12 @@
 
   &__ul {
     margin-bottom: 4rem;
+    padding-left: 2rem;
+    list-style: url(../img/icon-list.svg);
   }
 
   &__li {
     margin-bottom: 1rem;
+    padding-left: 1.6rem;
   }
 }
