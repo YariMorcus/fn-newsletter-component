@@ -31,6 +31,10 @@ main {
   display: flex;
   align-items: center;
   flex: 1;
+
+  @include m.breakpoint-sm() {
+    justify-content: center;
+  }
 }
 
 /* A elements that don't have a class get default styles */
