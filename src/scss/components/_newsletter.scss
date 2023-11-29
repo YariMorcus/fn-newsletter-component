@@ -30,10 +30,6 @@
     font: t.$font-size-paragraph 'Roboto', sans-serif;
     color: v.$charcoal-grey;
 
-    @include m.breakpoint-sm() {
-      padding: 5rem;
-    }
-
     @include m.breakpoint-md() {
       padding: 8rem 0 8rem 6rem;
     }
