@@ -34,5 +34,9 @@
     background-color: v.$dark-slate-grey;
     border: none;
     border-radius: 5px;
+
+    @include m.breakpoint-md() {
+      padding: 1.5rem;
+    }
   }
 }

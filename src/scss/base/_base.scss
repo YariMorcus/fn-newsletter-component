@@ -19,6 +19,12 @@ body {
   text-rendering: optimizeSpeed;
   font-family: 'Manrope', sans-serif;
   line-height: 1.5;
+  background-color: v.$charcoal-grey;
+
+  @include m.breakpoint-md() {
+    display: flex;
+    padding: 2rem;
+  }
 }
 
 main {
