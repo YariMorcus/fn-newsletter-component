@@ -1,6 +1,6 @@
-// Phone small - 387px
+// Phone small - 368px
 @mixin breakpoint-sm() {
-  @media (min-width: 24.188rem) {
+  @media (min-width: 23rem) {
     @content;
   }
 }
