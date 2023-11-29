@@ -1,6 +1,7 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as m;
 @use '../base/typography' as t;
+@use 'sass:color';
 
 .form {
   &__label,
@@ -34,6 +35,12 @@
     background-color: v.$dark-slate-grey;
     border: none;
     border-radius: 5px;
+
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(to right, v.$wild-watermelon 10%, v.$tomato);
+      box-shadow: 0px 9px 29px 2px color.scale(v.$tomato, $lightness: 40.94%);
+    }
 
     @include m.breakpoint-md() {
       padding: 1.5rem;
