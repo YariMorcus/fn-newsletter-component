@@ -30,6 +30,7 @@
   }
 
   &__email {
+    border: 2px solid transparent;
     margin-bottom: 2rem;
     padding: 2rem;
     border: 1px solid v.$grey;
@@ -68,7 +69,10 @@
 [1.2 Validations]
 -------------------------------------------------------------------*/
 
-.form {
+.form__email {
   &:invalid {
+    color: color.scale(v.$tomato, $lightness: 20%);
+    background-color: color.scale(v.$tomato, $lightness: 87%);
+    border: 2px solid color.scale(v.$tomato, $lightness: 20%);
   }
 }
