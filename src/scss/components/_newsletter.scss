@@ -6,6 +6,7 @@
   background-color: v.$white;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  height: 100vh;
 
   &__illustration {
     order: 1;
@@ -23,11 +24,16 @@
       background: url(../img/illustration-sign-up-desktop.svg) right 2rem center /
         84% no-repeat;
     }
+
+    &--success {
+      height: 200px;
+      background: url(../img/icon-success.svg) left 2.5rem bottom 1rem no-repeat;
+    }
   }
 
   &__article {
     padding: 2.5rem;
-    font: t.$font-size-paragraph 'Roboto', sans-serif;
+    font: #{t.$font-size-paragraph} / 1.5 'Roboto', sans-serif;
     color: v.$charcoal-grey;
 
     @include m.breakpoint-md() {
@@ -64,6 +70,10 @@
       position: absolute;
       left: 0;
     }
+  }
+
+  &__user-email {
+    font-weight: 700;
   }
 
   @include m.breakpoint-md() {
