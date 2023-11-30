@@ -107,14 +107,31 @@
   height: 100vh;
 
   & .newsletter {
+    &__illustration {
+      @include m.breakpoint-md() {
+        height: 14rem;
+        background-position: 7rem 7rem;
+      }
+    }
     &__article {
       display: flex;
       flex-direction: column;
-      padding: 2.5rem 2.5rem 4rem;
+
+      @include m.breakpoint-md() {
+        padding: 3rem 7rem 7rem;
+      }
     }
 
     &__p {
       flex: 1;
+      margin-bottom: 4rem;
     }
+  }
+
+  @include m.breakpoint-md() {
+    display: block;
+    grid-template-rows: initial;
+    max-width: 50rem;
+    height: initial;
   }
 }
