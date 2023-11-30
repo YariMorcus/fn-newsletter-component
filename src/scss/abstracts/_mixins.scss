@@ -5,6 +5,13 @@
   }
 }
 
+// Phone medium - 568px
+@mixin breakpoint-sm2() {
+  @media (min-width: 35.5rem) {
+    @content;
+  }
+}
+
 // Tablet - 850px
 @mixin breakpoint-md() {
   @media (min-width: 53.125rem) {
