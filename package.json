@@ -4,8 +4,8 @@
   "description": "Frontend Mentor challenge made by Yari Morcus",
   "default": "index.html",
   "scripts": {
-    "start": "parcel serve src/index.html --open --no-cache",
-    "build": "parcel build src/index.html"
+    "start": "parcel serve src/*.html --open --no-cache",
+    "build": "parcel build src/*.html"
   },
   "repository": {
     "type": "git",
