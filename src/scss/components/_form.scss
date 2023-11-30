@@ -19,11 +19,16 @@
   &__label,
   &__email,
   &__submit {
-    display: block;
+    display: inline-block;
+  }
+
+  &__email,
+  &__submit {
     width: 100%;
   }
 
-  &__label {
+  &__label,
+  &__error {
     margin-bottom: 1rem;
     font-weight: 700;
     font-size: 1.2rem;
@@ -69,8 +74,16 @@
 [1.2 Validations]
 -------------------------------------------------------------------*/
 
-.form__email {
-  &:invalid {
+.form {
+  &__row--label-error {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__error {
+    color: v.$tomato;
+  }
+
+  &__email--error {
     color: color.scale(v.$tomato, $lightness: 20%);
     background-color: color.scale(v.$tomato, $lightness: 87%);
     border: 2px solid color.scale(v.$tomato, $lightness: 20%);
