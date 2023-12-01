@@ -19,6 +19,10 @@ class subscribeView extends View {
     return EMAIL_FIELD.value.trim().length === 0 ? true : false;
   }
 
+  /**
+   * Retrieve user email
+   * @returns {string} User email
+   */
   getEmail() {
     return this.#parentEl.querySelector('.form__email').value.trim();
   }
