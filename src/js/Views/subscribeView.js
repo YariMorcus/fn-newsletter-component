@@ -9,6 +9,15 @@ class subscribeView extends View {
       handler();
     });
   }
+
+  /**
+   * Checks whether a form control is empty
+   * @returns {boolean} true if empty, otherwise false
+   */
+  isEmpty() {
+    const EMAIL_FIELD = this.#parentEl.querySelector('.form__email');
+    return EMAIL_FIELD.value.trim().length === 0 ? true : false;
+  }
 }
 
 export default new subscribeView();
