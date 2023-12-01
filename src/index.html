@@ -54,7 +54,8 @@
               <label for="email" class="form__label">Email address <span aria-label="required">*</span></label>
               <span id="js-form__error-email" class="form__error" aria-live="polite"></span>
             </div>
-            <input type="email" name="user_email" id="email" class="form__email" placeholder="email@company.com" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"required>
+            <input type="email" name="user_email" id="email" class="form__email" placeholder="email@company.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$"
+            required>
           </div> <!-- .form__row -->
           <div class="form__row">
             <button class="button">Subscribe to monthly newsletter</button>
