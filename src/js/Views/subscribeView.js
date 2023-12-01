@@ -18,6 +18,10 @@ class subscribeView extends View {
     const EMAIL_FIELD = this.#parentEl.querySelector('.form__email');
     return EMAIL_FIELD.value.trim().length === 0 ? true : false;
   }
+
+  getEmail() {
+    return this.#parentEl.querySelector('.form__email').value.trim();
+  }
 }
 
 export default new subscribeView();
