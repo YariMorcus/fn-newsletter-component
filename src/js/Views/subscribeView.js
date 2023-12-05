@@ -10,6 +10,13 @@ class subscribeView extends View {
     });
   }
 
+  addHandlerInputChange(handler) {
+    this.#parentEl.addEventListener('input', e => {
+      if (!e.target.classList.contains('form__email')) return;
+      handler();
+    });
+  }
+
   /**
    * Checks whether a form control is empty
    * @returns {boolean} true if empty, otherwise false
@@ -25,6 +32,35 @@ class subscribeView extends View {
    */
   getEmail() {
     return this.#parentEl.querySelector('.form__email').value.trim();
+  }
+
+  /**
+   * Render error CSS and text label
+   * @returns {undefined}
+   */
+  renderError() {
+    // Render error CSS
+    this.#parentEl
+      .querySelector(`.form__email`)
+      .classList.add(`form__email--error`);
+
+    // Render error text label
+    this.#parentEl.querySelector('#js-form__error-email').innerText =
+      'Valid email required';
+  }
+
+  /**
+   * Hide error CSS and text label
+   * @returns {undefined}
+   */
+  hideError() {
+    // Hide error CSS
+    this.#parentEl
+      .querySelector(`.form__email`)
+      .classList.remove(`form__email--error`);
+
+    // Hide error text label
+    this.#parentEl.querySelector('#js-form__error-email').innerText = '';
   }
 }
 
