@@ -6,12 +6,17 @@ const subscribeController = function () {
     // Check if email field is empty.
     if (subscribeView.isEmpty()) throw new Error();
 
-    // Check if user email is valid
-    if (!model.validEmail(subscribeView.getEmail())) throw new Error();
+    // Retrieve email
+    const USER_EMAIL = subscribeView.getEmail();
 
-    // 3. Valid? render success message
-    // 1. Render email of user
-    // 4. Not valid? render error message
+    // Check if user email is valid
+    if (!model.validEmail(USER_EMAIL)) throw new Error();
+
+    // Save user email
+    model.saveEmail(USER_EMAIL);
+
+    // Render success message
+    subscribeView.render(model.user);
   } catch (err) {
     // TODO add error handling
     console.error(err);
