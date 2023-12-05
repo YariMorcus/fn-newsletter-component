@@ -13,6 +13,10 @@ export const validEmail = function (email) {
   return EMAIL_REGEX.test(email) ? true : false;
 };
 
+/**
+ * Save user email in state object
+ * @param {undefined}
+ */
 export const saveEmail = function (email) {
   user.email = email;
 };
