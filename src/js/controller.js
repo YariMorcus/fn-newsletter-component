@@ -1,4 +1,5 @@
 import subscribeView from './Views/subscribeView';
+import successView from './Views/successView';
 import * as model from './model';
 
 const subscribeController = function () {
@@ -17,6 +18,9 @@ const subscribeController = function () {
 
     // Render success message
     subscribeView.render(model.user);
+
+    // Add click event listener to dismiss button
+    successView.addHandlerDismiss(dismissController);
   } catch (err) {
     // TODO add error handling
     console.error(err);
@@ -36,6 +40,10 @@ const formEmailController = function () {
 
   // Valid? Hide error
   subscribeView.hideError();
+};
+
+const dismissController = function () {
+  console.log(`dismissController in controller.js`);
 };
 
 const init = function () {
