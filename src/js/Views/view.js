@@ -9,7 +9,6 @@ export default class View {
     this.#clear();
 
     // Render markup
-    this.#parentElem.classList.add('newsletter--success');
     this.#parentElem.insertAdjacentHTML('afterbegin', markup);
   }
 
