@@ -18,6 +18,7 @@ const subscribeController = function () {
 
     // Render success message
     successView.render(model.user);
+    successView.toggleSuccessClass();
 
     // Add click event listener to dismiss button
     successView.addHandlerDismiss(dismissController);
@@ -45,6 +46,7 @@ const formEmailController = function () {
 const dismissController = function () {
   // Remove success markup and replace with form markup
   subscribeView.render(null);
+  successView.toggleSuccessClass();
 };
 
 const init = function () {
