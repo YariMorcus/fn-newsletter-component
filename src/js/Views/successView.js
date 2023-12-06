@@ -1,11 +1,11 @@
 import View from './view';
 
 class successView extends View {
-  #parentEl = null;
+  #parentEl = document.querySelector('.newsletter');
 
   addHandlerDismiss(handler) {
     // Initialize parent elem. first
-    this.#assignParentEl();
+    // this.#assignParentEl();
 
     // Listen for click event on dismiss button
     this.#parentEl.addEventListener('click', e => {
@@ -13,6 +13,11 @@ class successView extends View {
         handler();
       }
     });
+  }
+
+  toggleSuccessClass() {
+    console.log(this.#parentEl);
+    this.#parentEl.classList.toggle('newsletter--success');
   }
 
   /**
@@ -35,7 +40,7 @@ class successView extends View {
   #assignParentEl() {
     // If placed outside of method, #parentEl will be undefined because elem.
     // does not exists yet
-    this.#parentEl = document.querySelector('.newsletter--success');
+    this.#parentEl = document.querySelector('.newsletter');
   }
 }
 
