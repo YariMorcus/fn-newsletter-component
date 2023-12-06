@@ -1,17 +1,18 @@
 import View from './view';
 
 class subscribeView extends View {
-  #parentEl = document.querySelector('.form');
+  #parentEl = document.querySelector('.newsletter');
+  #formEl = document.querySelector('.form');
 
   addHandlerSubmit(handler) {
-    this.#parentEl.addEventListener('submit', e => {
+    this.#formEl.addEventListener('submit', e => {
       e.preventDefault();
       handler();
     });
   }
 
   addHandlerInputChange(handler) {
-    this.#parentEl.addEventListener('input', e => {
+    this.#formEl.addEventListener('input', e => {
       if (!e.target.classList.contains('form__email')) return;
       handler();
     });
@@ -58,7 +59,7 @@ class subscribeView extends View {
    * @returns {boolean} true if empty, otherwise false
    */
   isEmpty() {
-    const EMAIL_FIELD = this.#parentEl.querySelector('.form__email');
+    const EMAIL_FIELD = this.#formEl.querySelector('.form__email');
     return EMAIL_FIELD.value.trim().length === 0 ? true : false;
   }
 
@@ -67,7 +68,7 @@ class subscribeView extends View {
    * @returns {string} User email
    */
   getEmail() {
-    return this.#parentEl.querySelector('.form__email').value.trim();
+    return this.#formEl.querySelector('.form__email').value.trim();
   }
 
   /**
@@ -76,12 +77,12 @@ class subscribeView extends View {
    */
   renderError() {
     // Render error CSS
-    this.#parentEl
+    this.#formEl
       .querySelector(`.form__email`)
       .classList.add(`form__email--error`);
 
     // Render error text label
-    this.#parentEl.querySelector('#js-form__error-email').innerText =
+    this.#formEl.querySelector('#js-form__error-email').innerText =
       'Valid email required';
   }
 
@@ -91,12 +92,12 @@ class subscribeView extends View {
    */
   hideError() {
     // Hide error CSS
-    this.#parentEl
+    this.#formEl
       .querySelector(`.form__email`)
       .classList.remove(`form__email--error`);
 
     // Hide error text label
-    this.#parentEl.querySelector('#js-form__error-email').innerText = '';
+    this.#formEl.querySelector('#js-form__error-email').innerText = '';
   }
 }
 
