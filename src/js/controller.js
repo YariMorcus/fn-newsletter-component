@@ -1,5 +1,4 @@
 import subscribeView from './Views/subscribeView';
-import successView from './Views/successView';
 import * as model from './model';
 
 const subscribeController = function () {
@@ -15,13 +14,6 @@ const subscribeController = function () {
 
     // Save user email
     model.saveEmail(USER_EMAIL);
-
-    // Render success message
-    successView.render(model.user);
-    successView.toggleSuccessClass();
-
-    // Add click event listener to dismiss button
-    successView.addHandlerDismiss(dismissController);
   } catch (err) {
     // TODO add error handling
     console.error(err);
@@ -41,12 +33,6 @@ const formEmailController = function () {
 
   // Valid? Hide error
   subscribeView.hideError();
-};
-
-const dismissController = function () {
-  // Remove success markup and replace with form markup
-  subscribeView.render(null);
-  successView.toggleSuccessClass();
 };
 
 const init = function () {
