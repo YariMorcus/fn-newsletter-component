@@ -6,3 +6,6 @@
 
 // Forward newsletter file when _index.scss is @used
 @forward 'newsletter';
+
+// Forward subscribed file when _index.scss is @used
+@forward 'subscribed';
