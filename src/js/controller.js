@@ -39,13 +39,13 @@ const formEmailController = function () {
  */
 const subscribedController = function () {
   // If email is NOT defined, redirect user to subscribe page
-  if (!model.user.email) window.location.replace('/');
+  if (!model.user.email) location.replace('/');
 
   subscribedView.renderEmail(model.user.email);
 };
 
 // Retrieve current page
-const currentPath = window.location.pathname;
+const currentPath = location.pathname;
 const currentPage = currentPath.slice(
   currentPath.indexOf('/') + 1,
   currentPath.lastIndexOf('.html')
