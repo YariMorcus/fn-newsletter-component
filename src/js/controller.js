@@ -14,6 +14,8 @@ const subscribeController = function () {
 
     // Save user email
     model.saveEmail(USER_EMAIL);
+
+    subscribeView.submitForm();
   } catch (err) {
     // TODO add error handling
     console.error(err);

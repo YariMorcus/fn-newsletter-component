@@ -60,6 +60,10 @@ class subscribeView {
     // Hide error text label
     this.#formEl.querySelector('#js-form__error-email').innerText = '';
   }
+
+  submitForm() {
+    this.#formEl.submit();
+  }
 }
 
 export default new subscribeView();
