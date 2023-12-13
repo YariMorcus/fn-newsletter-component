@@ -7,7 +7,6 @@
 
 1. Newsletter
     1.1 General
-    1.2 Success
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
@@ -97,48 +96,6 @@
     column-gap: 1rem;
     margin: 0 auto;
     max-width: 90rem;
-    border-radius: 3.5rem;
-  }
-}
-
-/*------------------------------------------------------------------
-[1.2 Success]
--------------------------------------------------------------------*/
-
-.newsletter--success {
-  display: grid;
-  grid-template-rows: 20rem 2fr;
-  height: 100vh;
-
-  & .newsletter {
-    &__illustration {
-      order: 0; // reset otherwise layout breaks when form is visible
-
-      @include m.breakpoint-sm2() {
-        height: 14rem;
-        background-position: 7rem 7rem;
-      }
-    }
-    &__article {
-      display: flex;
-      flex-direction: column;
-
-      @include m.breakpoint-sm2() {
-        padding: 3rem 7rem 7rem;
-      }
-    }
-
-    &__p {
-      flex: 1;
-      margin-bottom: 4rem;
-    }
-  }
-
-  @include m.breakpoint-sm2() {
-    display: block;
-    grid-template-rows: initial;
-    max-width: 50rem;
-    height: initial;
     border-radius: 3.5rem;
   }
 }
