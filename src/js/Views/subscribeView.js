@@ -16,6 +16,23 @@ class subscribeView {
   }
 
   /**
+   * Generate success message HTML markup
+   * @returns {string} HTML markup
+   */
+  _generateMarkup() {
+    const markup = `
+      <div class="newsletter__illustration newsletter__illustration--success"></div>
+      <article class="newsletter__article">
+        <h1 class="newsletter__h1">Thanks for subscribing!</h1>
+        <p class="newsletter__p">A confirmation email has been sent to <span class="newsletter__user-email">${this._data.email}</span>.
+          Please open it and click the button inside to confirm your subscription.</p>
+        <button class="button">Dismiss message</button>
+      </article> <!-- .newsletter__article -->`;
+
+    return markup;
+  }
+
+  /**
    * Checks whether a form control is empty
    * @returns {boolean} true if empty, otherwise false
    */

@@ -1,5 +1,4 @@
 import subscribeView from './Views/subscribeView';
-import subscribedView from './Views/subscribedView';
 import * as model from './model';
 
 const subscribeController = function () {
@@ -15,7 +14,11 @@ const subscribeController = function () {
   // Save user email
   model.saveEmail(USER_EMAIL);
 
-  subscribeView.submitForm();
+  // Render success message
+  subscribeView.render(model.user);
+
+  // Add click event listener to dismiss button
+  successView.addHandlerDismiss(dismissController);
 };
 
 /**
@@ -33,15 +36,8 @@ const formEmailController = function () {
   subscribeView.hideError(model.user.email);
 };
 
-/**
- * This controller is used to render the user email from the
- * state object on the subscribed page after form submission
- */
-const subscribedController = function () {
-  // If email is NOT defined, redirect user to subscribe page
-  if (!model.user.email) location.replace('/');
-
-  subscribedView.renderEmail(model.user.email);
+const dismissController = function () {
+  console.log(`dismissController in controller.js`);
 };
 
 // Retrieve current page
