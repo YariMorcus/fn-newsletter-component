@@ -4,10 +4,12 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 Difficulty: Junior
 
+    Current status: on hold
+
 ![Screenshot of the newsletter component](screenshot.jpg)
 _Source: [Challenge page Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv)_
 
-**Deployment status** [![Netlify Status](https://api.netlify.com/api/v1/badges/e0cfa225-7ac9-4af5-878e-f91c5afe538c/deploy-status)](https://app.netlify.com/sites/newsletter-component-yari-morcus/deploys)
+**Deployment status** [![Netlify Status](https://api.netlify.vcom/api/v1/badges/e0cfa225-7ac9-4af5-878e-f91c5afe538c/deploy-status)](https://app.netlify.com/sites/newsletter-component-yari-morcus/deploys)
 
 ## Table of contents
 
