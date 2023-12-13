@@ -80,14 +80,17 @@ img {
 }
 
 .noscript {
-  padding: 2rem 1rem;
-  font-size: 2rem;
-  // color: v.$light-cyan;
-  color: v.$white;
-  text-align: center;
-  border-bottom: 1px solid;
+  &__p {
+    margin-bottom: 2rem;
+    padding: 2.5rem;
+    font-size: 2rem;
+    color: v.$charcoal-grey;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid;
 
-  @include m.breakpoint-md() {
-    padding: 2rem 0;
+    @include m.breakpoint-sm2() {
+      border-radius: 1rem;
+    }
   }
 }
