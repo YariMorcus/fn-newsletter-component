@@ -1,0 +1,50 @@
+@use '../abstracts/mixins' as m;
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Subscribed
+    1.1 General
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[1.1 General]
+-------------------------------------------------------------------*/
+
+.subscribed {
+  display: grid;
+  grid-template-rows: 20rem 2fr;
+  height: 100vh;
+
+  & .newsletter {
+    &__illustration {
+      order: 0; // reset otherwise layout breaks when form is visible
+
+      @include m.breakpoint-sm2() {
+        height: 14rem;
+        background-position: 7rem 7rem;
+      }
+    }
+    &__article {
+      display: flex;
+      flex-direction: column;
+
+      @include m.breakpoint-sm2() {
+        padding: 3rem 7rem 7rem;
+      }
+    }
+
+    &__p {
+      flex: 1;
+      margin-bottom: 4rem;
+    }
+  }
+
+  @include m.breakpoint-sm2() {
+    display: block;
+    grid-template-rows: initial;
+    max-width: 50rem;
+    height: initial;
+    border-radius: 3.5rem;
+  }
+}
