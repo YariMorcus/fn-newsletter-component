@@ -67,6 +67,6 @@
   &__email--error {
     color: color.scale(v.$tomato, $lightness: 20%);
     background-color: color.scale(v.$tomato, $lightness: 87%);
-    border: 2px solid color.scale(v.$tomato, $lightness: 20%);
+    border: 1px solid color.scale(v.$tomato, $lightness: 20%);
   }
 }
