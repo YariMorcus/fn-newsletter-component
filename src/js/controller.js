@@ -38,6 +38,9 @@ const formEmailController = function () {
  * state object on the subscribed page after form submission
  */
 const subscribedController = function () {
+  // If email is NOT defined, redirect user to subscribe page
+  if (!model.user.email) window.location.replace('/');
+
   subscribedView.renderEmail(model.user.email);
 };
 
