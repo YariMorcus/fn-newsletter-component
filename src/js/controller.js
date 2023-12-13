@@ -3,24 +3,19 @@ import subscribedView from './Views/subscribedView';
 import * as model from './model';
 
 const subscribeController = function () {
-  try {
-    // Check if email field is empty.
-    if (subscribeView.isEmpty()) throw new Error();
+  // Check if email field is empty.
+  if (subscribeView.isEmpty()) throw new Error();
 
-    // Retrieve email
-    const USER_EMAIL = subscribeView.getEmail();
+  // Retrieve email
+  const USER_EMAIL = subscribeView.getEmail();
 
-    // Check if user email is valid
-    if (!model.validEmail(USER_EMAIL)) throw new Error();
+  // Check if user email is valid
+  if (!model.validEmail(USER_EMAIL)) throw new Error();
 
-    // Save user email
-    model.saveEmail(USER_EMAIL);
+  // Save user email
+  model.saveEmail(USER_EMAIL);
 
-    subscribeView.submitForm();
-  } catch (err) {
-    // TODO add error handling
-    console.error(err);
-  }
+  subscribeView.submitForm();
 };
 
 /**
