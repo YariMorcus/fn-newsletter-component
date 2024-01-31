@@ -1,4 +1,5 @@
 import subscribeView from './Views/subscribeView';
+import successView from './Views/successView';
 import * as model from './model';
 
 const subscribeController = function () {
@@ -15,10 +16,10 @@ const subscribeController = function () {
   model.saveEmail(USER_EMAIL);
 
   // Render success message
-  subscribeView.render(model.user);
+  successView.render(model.user.email);
 
   // Add click event listener to dismiss button
-  successView.addHandlerDismiss(dismissController);
+  // successView.addHandlerDismiss(dismissController);
 };
 
 /**

@@ -1,24 +1,19 @@
-import View from './view';
-
+import View from './View';
 class successView extends View {
-  #parentEl = null;
+  _parentEl = document.querySelector('.newsletter');
 
-  addHandlerDismiss(handler) {
-    // Initialize parent elem. first
-    this.#assignParentEl();
+  _generateMarkup() {
+    const markup = `
+      <div class="newsletter__illustration newsletter__illustration--success"></div>
+      <article class="newsletter__article">
+        <h1 class="newsletter__h1">Thanks for subscribing!</h1>
+        <p class="newsletter__p">A confirmation email has been sent to <span id="js-user-email" class="newsletter__user-email">ash@loremcompany.com</span>.
+          Please open it and click the button inside to confirm your subscription.</p>
+        <a class="button" type="button" href="/">Dismiss message</a>
+      </article>
+    `;
 
-    // Listen for click event on dismiss button
-    this.#parentEl.addEventListener('click', e => {
-      if (e.target.classList.contains('button')) {
-        handler();
-      }
-    });
-  }
-
-  #assignParentEl() {
-    // If placed outside of method, #parentEl will be undefined because elem.
-    // does not exists yet
-    this.#parentEl = document.querySelector('.newsletter--success');
+    return markup;
   }
 }
 
