@@ -7,6 +7,7 @@ export const user = {
 
 /**
  * Test email based on regex
+ * @param {string} email user e-mail
  * @returns {boolean} true if match, OTHERWISE false
  */
 export const validEmail = function (email) {
@@ -15,7 +16,8 @@ export const validEmail = function (email) {
 
 /**
  * Save user email in state object
- * @param {undefined}
+ * @param {string} email user e-mail
+ * @returns {undefined}
  */
 export const saveEmail = function (email) {
   user.email = email;
