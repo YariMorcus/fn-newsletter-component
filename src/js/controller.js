@@ -38,24 +38,9 @@ const formEmailController = function () {
   subscribeView.hideError(model.user.email);
 };
 
-const dismissController = function () {
-  console.log(`dismissController in controller.js`);
+const init = function () {
+  subscribeView.addHandlerSubmit(subscribeController);
+  subscribeView.addHandlerInputChange(formEmailController);
 };
 
-// Retrieve current page
-const currentPath = location.pathname;
-const currentPage = currentPath.slice(
-  currentPath.indexOf('/') + 1,
-  currentPath.lastIndexOf('.html')
-);
-
-const init = function (page) {
-  if (page === 'subscribed') {
-    subscribedController();
-  } else {
-    subscribeView.addHandlerSubmit(subscribeController);
-    subscribeView.addHandlerInputChange(formEmailController);
-  }
-};
-
-init(currentPage);
+init();
