@@ -1,6 +1,14 @@
 import View from './View';
 class successView extends View {
   _parentEl = document.querySelector('.newsletter');
+  #classNameSubscribed = 'subscribed';
+
+  /**
+   * Add subscribe class to .newsletter for styling purposes
+   */
+  addSubscribedClass() {
+    this._parentEl.classList.add(this.#classNameSubscribed);
+  }
 
   _generateMarkup() {
     const markup = `
