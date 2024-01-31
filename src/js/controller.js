@@ -18,9 +18,6 @@ const subscribeController = function () {
   // Render success message
   successView.render(model.user.email);
   successView.addSubscribedClass();
-
-  // Add click event listener to dismiss button
-  // successView.addHandlerDismiss(dismissController);
 };
 
 /**
