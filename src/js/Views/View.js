@@ -1,9 +1,13 @@
+/**
+ * Parent class of all other views
+ * @property {String} data the user e-mail
+ */
 export default class View {
   _data = null;
 
   /**
    * Render the markup on the page
-   * @param {string} data the user email
+   * @param {String} data the user email
    */
   render(data) {
     this._data = data;

@@ -1,6 +1,14 @@
+/**
+ * Class representing the subscribeView (visible form)
+ * @property {Object} formEl - the form element itself
+ */
 class subscribeView {
   #formEl = document.querySelector('.form');
 
+  /**
+   * Listen for submit event on form element
+   * @param {Object} handler - the controller function
+   */
   addHandlerSubmit(handler) {
     this.#formEl.addEventListener('submit', e => {
       e.preventDefault();
@@ -8,6 +16,10 @@ class subscribeView {
     });
   }
 
+  /**
+   * Listen for input event on e-mail input field
+   * @param {Object} handler - the controller function
+   */
   addHandlerInputChange(handler) {
     this.#formEl.addEventListener('input', e => {
       if (!e.target.classList.contains('form__email')) return;
@@ -34,7 +46,7 @@ class subscribeView {
 
   /**
    * Checks whether a form control is empty
-   * @returns {boolean} true if empty, otherwise false
+   * @returns {Boolean} true if empty, otherwise false
    */
   isEmpty() {
     const EMAIL_FIELD = this.#formEl.querySelector('.form__email');
@@ -43,7 +55,7 @@ class subscribeView {
 
   /**
    * Retrieve user email
-   * @returns {string} User email
+   * @returns {String} User email
    */
   getEmail() {
     return this.#formEl.querySelector('.form__email').value.trim();
@@ -78,6 +90,9 @@ class subscribeView {
     this.#formEl.querySelector('#js-form__error-email').innerText = '';
   }
 
+  /**
+   * Submit form programmatically
+   */
   submitForm() {
     this.#formEl.submit();
   }

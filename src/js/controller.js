@@ -2,8 +2,11 @@ import subscribeView from './Views/subscribeView';
 import successView from './Views/successView';
 import * as model from './model';
 
+/**
+ * Controller that provides functionality for the form
+ */
 const subscribeController = function () {
-  // Check if email field is empty.
+  // Check if email field is empty
   if (subscribeView.isEmpty()) throw new Error();
 
   // Retrieve email
@@ -21,7 +24,7 @@ const subscribeController = function () {
 };
 
 /**
- * This controller is used to apply inline validation to the form email field
+ * Controller that provides inline validation
  * @returns {undefined}
  */
 const formEmailController = function () {
