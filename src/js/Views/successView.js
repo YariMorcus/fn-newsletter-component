@@ -1,4 +1,10 @@
 import View from './View';
+
+/**
+ * Class representing the successView (when subscribed)
+ * @property {Object} parentEl - the parent element
+ * @property {String} classNameSubscribed - class name for successView (styling purposes)
+ */
 class successView extends View {
   _parentEl = document.querySelector('.newsletter');
   #classNameSubscribed = 'subscribed';
