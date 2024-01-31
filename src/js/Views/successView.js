@@ -10,12 +10,16 @@ class successView extends View {
     this._parentEl.classList.add(this.#classNameSubscribed);
   }
 
+  /**
+   * Generate markup
+   * @returns {string} markup the markup
+   */
   _generateMarkup() {
     const markup = `
       <div class="newsletter__illustration newsletter__illustration--success"></div>
       <article class="newsletter__article">
         <h1 class="newsletter__h1">Thanks for subscribing!</h1>
-        <p class="newsletter__p">A confirmation email has been sent to <span id="js-user-email" class="newsletter__user-email">ash@loremcompany.com</span>.
+        <p class="newsletter__p">A confirmation email has been sent to <span id="js-user-email" class="newsletter__user-email">${this._data}</span>.
           Please open it and click the button inside to confirm your subscription.</p>
         <a class="button" type="button" href="/">Dismiss message</a>
       </article>
